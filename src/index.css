@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100%;
+  font-family: "Noto Sans KR", "Noto Sans", system-ui, sans-serif;
+}
+body,
+#root {
+  height: 100%;
+  overscroll-behavior: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  @apply m-0 antialiased bg-white text-zinc-800;
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  font-family: inherit;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* main 등: 얇은 검은 스크롤바 */
+.scrollbar-thin-black {
+  scrollbar-width: none;
+}
+
+
+.relative:focus-within>p.plus-icon {
+  opacity: 0;
+}
