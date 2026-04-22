@@ -7,20 +7,30 @@ type Props = {
 
 export default function IntroOverlay({introActive,handleIntroClick}:Props) {
   const [step, setStep] = useState(0);
+  const [introSkip, setIntroSkip] = useState(false);
+
   const [visible, setVisible] = useState(true);
-  const steps = [<StepOne />, <StepTwo />, <StepThree />];
+  const steps = [<StepOne />, <StepTwo />, <StepThree />,<StepFour/>,<StepFive/>];
   const handleNext = () => {
     setVisible(false);
-
     setTimeout(() => {
-      if (step < 2) {
+      if (step < steps.length -1) {
         setStep((prev) => prev + 1);
         setVisible(true);
       } else {
         handleIntroClick();
       }
-    }, 300);
+      setIntroSkip(true);
+    }, 200);
   };
+
+  const handleSkip = (e: React.MouseEvent)=>{
+    e.stopPropagation();
+    setTimeout(() => {
+      handleIntroClick();
+      setIntroSkip(true);
+    }, 200);
+  }
   
   return (
       <div
@@ -41,8 +51,18 @@ export default function IntroOverlay({introActive,handleIntroClick}:Props) {
           {steps[step]}
         </div>
         
-        <div className="absolute bottom-[100px] w-[80px] h-[40px] flex items-center justify-center cursor-pointer" onClick={handleNext}>
-          <p className="text-[17px] text-[#000]">&gt;</p>
+        <div className="absolute bottom-[100px] w-[80px] h-[40px] flex items-center justify-center cursor-pointer gap-[10px]">
+          <p className="text-[17px] w-[55px] h-[40px] flex items-center justify-center text-[#909090]" onClick={handleNext}>&gt;</p>
+          <p
+            className={`
+              w-[55px] h-[40px] flex items-center justify-center text-[#909090]
+              ${introSkip ? "hidden" : "flex"}
+            `}
+            onClick={handleSkip}
+          >
+            &gt;&gt;
+          </p>
+          
         </div>
         
         <p className="w-full h-[30px] flex items-center justify-center text-[8px] text-zinc-400 absolute bottom-0">
@@ -87,6 +107,22 @@ function StepTwo() {
 }
 
 function StepThree() {
+  return (
+    <div className="flex max-w-[300px] items-center">
+      <img src="/img-02.png" alt="img" />
+    </div>
+  );
+}
+
+function StepFour() {
+  return (
+    <div className="flex max-w-[300px] items-center">
+      <img src="/img-03.png" alt="img" />
+    </div>
+  );
+}
+
+function StepFive() {
   return (
     <div className="text-[14px] w-full flex flex-col gap-[30px]">
       <div className='max-w-[300px] text-right w-full m-auto flex justify-center items-center'>
