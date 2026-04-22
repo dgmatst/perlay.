@@ -110,7 +110,7 @@ export default function Composer({ onSend, onReset }: Props) {
         >
           <button
             type="button"
-            className="flex h-[48px] min-h-0 min-w-0 flex-1 max-w-[80px] items-center justify-center rounded-full border-0 bg-[#E0E0E0] px-6 text-white active:opacity-90"
+            className="flex h-[48px] cursor-pointer min-h-0 min-w-0 flex-1 max-w-[80px] items-center justify-center rounded-full border-0 bg-[#E0E0E0] px-6 text-white active:opacity-90"
             aria-label="메시지 입력 열기"
             onClick={() => setExpanded(true)}
           >
@@ -118,11 +118,15 @@ export default function Composer({ onSend, onReset }: Props) {
           </button>
           <button
             type="button"
-            className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full border-0 bg-[#E0E0E0] text-white active:opacity-90"
+            className="flex h-[48px] w-[48px] cursor-pointer shrink-0 items-center justify-center rounded-full border-0 bg-[#E0E0E0] text-white active:opacity-90"
             aria-label="대화 기록 지우기"
             onClick={() => setResetConfirmOpen(true)}
           >
-            <span className="text-[18px] font-light leading-none">−</span>
+            <span className="text-[18px] font-light leading-none">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 10C3.60417 10 2.42187 9.51562 1.45312 8.54688C0.484375 7.57812 0 6.39583 0 5C0 3.60417 0.484375 2.42187 1.45312 1.45312C2.42187 0.484375 3.60417 0 5 0C5.71875 0 6.40625 0.148333 7.0625 0.445C7.71875 0.741667 8.28125 1.16625 8.75 1.71875V0H10V4.375H5.625V3.125H8.25C7.91667 2.54167 7.46104 2.08333 6.88312 1.75C6.30521 1.41667 5.6775 1.25 5 1.25C3.95833 1.25 3.07292 1.61458 2.34375 2.34375C1.61458 3.07292 1.25 3.95833 1.25 5C1.25 6.04167 1.61458 6.92708 2.34375 7.65625C3.07292 8.38542 3.95833 8.75 5 8.75C5.80208 8.75 6.52604 8.52083 7.17188 8.0625C7.81771 7.60417 8.27083 7 8.53125 6.25H9.84375C9.55208 7.35417 8.95833 8.25521 8.0625 8.95312C7.16667 9.65104 6.14583 10 5 10Z" fill="#909090"/>
+              </svg>
+            </span>
           </button>
         </div>
 

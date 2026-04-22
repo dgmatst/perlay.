@@ -55,7 +55,7 @@ export default function IntroOverlay({introActive,handleIntroClick}:Props) {
 
 function StepOne() {
   return (
-    <div className="text-[15px] max-w-[185px] flex flex-col justify-center text-[#505050] uppercase">
+    <div className="text-[14px] max-w-[300px] flex flex-col justify-center text-[#505050] uppercase">
       par·ley<br />
       /ˈpärlē/<br />
       <br />
@@ -71,9 +71,18 @@ function StepOne() {
 
 function StepTwo() {
   return (
-    <div className="text-[15px] max-w-[300px] text-[#909090]">
-      There is no such thing as winning an argument. there is only an inaccurate and biased opinion that tricks oneself to believe that there is. 
-    </div>
+    <>
+      <div className="flex flex-col max-w-[300px] items-center">
+        <div className="mb-[30px]"><img src="/img-01.png" alt="img" /></div>
+        <div className="text-[15px] text-[#909090] uppercase">
+          <span>“Whatever kind of thought arises, have the same reaction: ‘Not me, not my business’. It can be a good thought or a bad thought. Treat them the same way. ‘To whom are these thoughts arising? To You.’ That means you are not the thought. You are the Self. Remain as the Self, and don’t latch onto anything that is not the Self.”</span> 
+          <br/>
+          <br/>
+          <span>- Sri annamalai swami</span>
+        </div>
+      </div>
+    
+    </>
   );
 }
 
