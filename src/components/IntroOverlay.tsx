@@ -93,13 +93,7 @@ function StepTwo() {
   return (
     <>
       <div className="flex flex-col max-w-[300px] items-center">
-        <div className="mb-[30px]"><img src="/img-01.png" alt="img" /></div>
-        <div className="text-[15px] text-[#909090] uppercase">
-          <span>“Whatever kind of thought arises, have the same reaction: ‘Not me, not my business’. It can be a good thought or a bad thought. Treat them the same way. ‘To whom are these thoughts arising? To You.’ That means you are not the thought. You are the Self. Remain as the Self, and don’t latch onto anything that is not the Self.”</span> 
-          <br/>
-          <br/>
-          <span>- Sri annamalai swami</span>
-        </div>
+        <div><img src="/img-01.png" alt="img" /></div>
       </div>
     
     </>
@@ -108,8 +102,14 @@ function StepTwo() {
 
 function StepThree() {
   return (
-    <div className="flex max-w-[300px] items-center">
-      <img src="/img-02.png" alt="img" />
+    <div className="flex flex-col max-w-[300px] items-center">
+      <div className="mb-[30px]"><img src="/img-02.png" alt="img" /></div>
+      <div className="text-[15px] text-[#909090] uppercase">
+        <span>“Whatever kind of thought arises, have the same reaction: ‘Not me, not my business’. It can be a good thought or a bad thought. Treat them the same way. ‘To whom are these thoughts arising? To You.’ That means you are not the thought. You are the Self. Remain as the Self, and don’t latch onto anything that is not the Self.”</span> 
+        <br/>
+        <br/>
+        <span>- Sri annamalai swami</span>
+      </div>
     </div>
   );
 }
