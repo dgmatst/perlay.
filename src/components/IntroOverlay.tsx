@@ -10,7 +10,7 @@ export default function IntroOverlay({introActive,handleIntroClick}:Props) {
   const [introSkip, setIntroSkip] = useState(false);
 
   const [visible, setVisible] = useState(true);
-  const steps = [<StepOne />, <StepTwo />, <StepThree />,<StepFour/>,<StepFive/>];
+  const steps = [<StepOne />, <StepTwo />, <StepThree />,<StepFour/>,<StepFive/>,<StepSix/>];
   const handleNext = () => {
     setVisible(false);
     setTimeout(() => {
@@ -121,8 +121,15 @@ function StepFour() {
     </div>
   );
 }
-
 function StepFive() {
+  return (
+    <div className="flex max-w-[300px] items-center">
+      <img src="/img-04.png" alt="img" />
+    </div>
+  );
+}
+
+function StepSix() {
   return (
     <div className="text-[14px] w-full flex flex-col gap-[30px]">
       <div className='max-w-[300px] text-right w-full m-auto flex justify-center items-center'>
