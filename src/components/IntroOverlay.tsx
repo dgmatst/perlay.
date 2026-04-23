@@ -51,7 +51,7 @@ export default function IntroOverlay({introActive,handleIntroClick}:Props) {
           {steps[step]}
         </div>
         
-        <div className="absolute bottom-[100px] w-[80px] h-[40px] flex items-center justify-center cursor-pointer gap-[10px]">
+        <div className="absolute bottom-[clamp(80px,10vh,100px)] w-[80px] h-[40px] flex items-center justify-center cursor-pointer gap-[10px]">
           <p className="text-[17px] w-[55px] h-[40px] flex items-center justify-center text-[#909090]" onClick={handleNext}>&gt;</p>
           <p
             className={`
@@ -104,7 +104,7 @@ function StepThree() {
   return (
     <div className="flex flex-col max-w-[300px] items-center">
       <div className="mb-[30px]"><img src="/img-02.png" alt="img" /></div>
-      <div className="text-[15px] text-[#909090] uppercase">
+      <div className="text-[14px] text-[#909090] uppercase">
         <span>“Whatever kind of thought arises, have the same reaction: ‘Not me, not my business’. It can be a good thought or a bad thought. Treat them the same way. ‘To whom are these thoughts arising? To You.’ That means you are not the thought. You are the Self. Remain as the Self, and don’t latch onto anything that is not the Self.”</span> 
         <br/>
         <br/>
