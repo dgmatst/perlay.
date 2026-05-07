@@ -11,9 +11,9 @@ export default function MessageList({ conversation }: { conversation: Conversati
   return (
     <div className="flex flex-col">
       {conversation.messages.length === 0 ? (
-        <p className="text-center text-sm text-zinc-400">
-          Tap (+) to Start a Conversation
-        </p>
+      <div className="text-center text-sm text-zinc-400 absolute bottom-[158px] left-1/2 -translate-x-1/2 w-full max-w-[300px]">
+        새로 고침으로 새로운 세션을 열고<br/> 더하기로 생각을 추가합니다.
+      </div>
       ) : null}
 
       {conversation.messages.map((m, i) => {
