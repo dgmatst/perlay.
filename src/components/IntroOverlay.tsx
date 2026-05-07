@@ -28,35 +28,35 @@ export default function IntroOverlay() {
     <div
       className={`
         absolute inset-0 z-50 flex items-center justify-center
-        bg-white
-        transition-opacity duration-500
+        transition-opacity duration-400
+        bg-white/50
         ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
     >
       <div className="relative w-full h-full flex justify-center">
         
-        {/* STEP 1 */}
-        <div
-          className={`
-            absolute inset-0 flex items-center justify-center
-            transition-opacity duration-500
-            ${step === 0 ? "opacity-100" : "opacity-0 pointer-events-none"}
-          `}
-          onClick={handleClick}
-        >
-          <StepOne />
-        </div>
-
         {/* STEP 2 */}
         <div
           className={`
             absolute inset-0 flex items-center justify-center
-            transition-opacity duration-500
-            ${step === 1 ? "opacity-100" : "opacity-0 pointer-events-none"}
+            transition-opacity duration-400
+            ${step < 2 ? "opacity-100" : "opacity-0 pointer-events-none"}
           `}
           onClick={handleClick}
         >
           <StepTwo />
+        </div>
+
+        {/* STEP 1 */}
+        <div
+          className={`
+            absolute inset-0 flex items-center justify-center
+            transition-opacity duration-400
+            ${step < 1 ? "opacity-100" : "opacity-0 pointer-events-none"}
+          `}
+          onClick={handleClick}
+        >
+          <StepOne />
         </div>
       </div>
 
@@ -69,7 +69,7 @@ export default function IntroOverlay() {
 
 function StepOne() {
   return (
-    <div className="w-full h-full flex justify-center items-center bg-white">
+    <div className="w-full h-full flex justify-center items-center bg-white/50 backdrop-blur-[3px]">
       <p className="text-[14px] text-[#505050] uppercase">
         PARLEY.
       </p>
@@ -79,7 +79,7 @@ function StepOne() {
 
 function StepTwo() {
   return (
-    <div className="max-w-[300px] w-full h-full flex justify-center items-center bg-white">
+    <div className="max-w-[300px] w-full h-full flex justify-center items-center bg-white/50 backdrop-blur-[3px]">
       <p className="text-[14px] text-[#909090] uppercase text-center leading-relaxed">
         생각은 일련의 흐름처럼 인식되지만, 들여다보면
         <br />

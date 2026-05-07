@@ -29,12 +29,6 @@ export default function App() {
   const [state, setState] = useState<AppState>(() =>
     ensureBootstrap(loadState()),
   );
-  
-  const [introActive, setIntroActive] = useState(true);
-
-  const handleIntroClick = () => {
-    setIntroActive(false);
-  };
 
   useEffect(() => {
     const t = setTimeout(() => saveState(state), 200);
