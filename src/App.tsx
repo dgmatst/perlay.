@@ -97,7 +97,7 @@ export default function App() {
   return (
     <>
 
-      <IntroOverlay introActive={introActive} handleIntroClick={handleIntroClick}/>
+      <IntroOverlay/>
 
       <div className="mx-auto flex h-full min-h-0 w-full max-w-lg flex-col bg-white relative">
         <header className="shrink-0">
