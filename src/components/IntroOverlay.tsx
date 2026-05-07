@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function IntroOverlay() {
   const [step, setStep] = useState(0);
